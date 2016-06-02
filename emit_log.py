@@ -9,7 +9,11 @@ channel = connection.channel()
 channel.exchange_declare(exchange='logs',
                          type='fanout')
 
+<<<<<<< HEAD
 message = ' '.join(sys.argv[1:]) or "info: Hello World!XdasdsadasdsafdsfsdfdsafdasfdsfdsaXXXXX"
+=======
+message = ' '.join(sys.argv[1:]) or "info: Hello World!XXXXXXX"
+>>>>>>> dev
 channel.basic_publish(exchange='logs',
                       routing_key='',
                       body=message)
